@@ -1,13 +1,13 @@
 <?php
 /**
- * hoplite_ti_test.php
- * Test harness for for interacting with the Hoplite Threat Intelligence APIs
+ * gwi_ti_test.php
+ * Test harness for for interacting with the GhostWolf Threat Intelligence APIs
  * Not fully parametereized, illustrative purposes only
  *
  * PHP version 5.5+
  *
- * @author		acochenour@hopliteindustries.com
- * @copyright	2014-2016 Hoplite Industries, Inc.
+ * @author		jfitterer@GhostWolfindustries.com
+ * @copyright	2014-2019 GhostWolf Industries, Inc.
  * @license		
  * @version		0.1
  * @since		  v0.1
@@ -23,7 +23,7 @@ $pVars = array(
 );
 
 $ch = curl_init();
-curl_setopt($ch, CURLOPT_URL,"https://ti-api.hoplite.io/token");
+curl_setopt($ch, CURLOPT_URL,"https://ti-api.ghostwolfindustries.com/token");
 curl_setopt($ch, CURLOPT_POST, 1);
 curl_setopt($ch, CURLOPT_POSTFIELDS,$pVars);  //Post Fields
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
@@ -38,7 +38,7 @@ curl_close ($ch);
 
 /*
  * Using the access token, issue a GET request to determine if the subject ip 128.75.222.116
- * is in the Hoplite Threat ntel database
+ * is in the GhostWolf Threat ntel database
  * 
  */
 $header = array(
@@ -46,7 +46,7 @@ $header = array(
 );
 $ch = curl_init();
 curl_setopt($ch, CURLOPT_HTTPHEADER, $header);
-curl_setopt($ch, CURLOPT_URL,"https://ti-api.hoplite.io/ip/128.75.222.116");
+curl_setopt($ch, CURLOPT_URL,"https://ti-api.ghostwolfindustries.com/ip/128.75.222.116");
 curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
 $aResponse = curl_exec ($ch);
 

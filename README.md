@@ -1,6 +1,6 @@
 # TI-API-Examples
 
-Working code examples in various languages for interacting with the Hoplite Threat Intel APIs
+Working code examples in various languages for interacting with the GhostWolf Threat Intel APIs
 
 * /ip - TI lookup for a given IP address, V4 and V6 compatible
 * /ip/subnet - TI lookup for a given IP subnet, V4-only and currently limited to /24 and smaller

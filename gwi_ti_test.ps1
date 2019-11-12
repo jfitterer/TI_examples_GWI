@@ -1,9 +1,9 @@
 ##
-## PowerShell Test Harness for the Hoplite Threat Intel API
+## PowerShell Test Harness for the GhostWolf Threat Intel API
 ## Not fully parametereized, illustrative purposes only
 ##
-## @author	acochenour@hopliteindustries.com
-## @copyright	2014-2016 Hoplite Industries, Inc.
+## @author	jfitterer@ghostwolfindustries.com
+## @copyright	2014-2019 GhostWolf Industries, Inc.
 ## @license	
 ## @version	0.1.3
 ## @since	v0.1
@@ -20,7 +20,7 @@ $body = @{
 $json = $body | ConvertTo-Json
 
 ## Execute the API POST to get a current access token
-$tResponse = Invoke-RestMethod 'https://ti-api.hoplite.io/token' -Method POST -Body $json -ContentType 'application/json'
+$tResponse = Invoke-RestMethod 'https://ti-api.ghostwolfindustries.com/token' -Method POST -Body $json -ContentType 'application/json'
 $token = $tResponse.access_token
 
 ## Build the correct HTTP header for the API GET request
@@ -29,7 +29,7 @@ $headers.Add("Authorization", "Bearer "+$token)
 
 try {
     ## With the access token and HTTP header in hand, execute the API GET to see if the subject ip, 128.75.222.116, is malicious
-    $aResponse = Invoke-RestMethod -Uri 'https://ti-api.hoplite.io/ip/128.75.222.116' -Method GET -Headers $headers -ContentType 'application/json' 
+    $aResponse = Invoke-RestMethod -Uri 'https://ti-api.ghostwolfindustries.com/ip/128.75.222.116' -Method GET -Headers $headers -ContentType 'application/json' 
     Write-Output $aResponse
 } catch {
     Write-Host "Not Found - The Indicator Does Not Appear in the Current TI Data Set"

@@ -1,10 +1,10 @@
 '''
-  hoplite_ti_test.php
+  gwi_ti_test.php
   Test harness for for interacting with the Hoplite Threat Intelligence APIs
   Not fully parametereized, illustrative purposes only
  
-  @author	acochenour@hopliteindustries.com
-  @copyright	2014-2016 Hoplite Industries, Inc.
+  @author	jfitterer@ghostwolfindustries.com
+  @copyright	2014-2019 GhostWolf Industries, Inc.
   @license		
   @version	0.1
   @since	v0.1
@@ -21,14 +21,14 @@ data = {"client_id": "user@domain.com", "client_secret": "XXXX-XXXX-XXXX-XXXXX-X
 '''
   With the raw response in hand, extract the access_token and close the connection
 '''
-tResponse = requests.post('https://ti-api.hoplite.io/token', data)
+tResponse = requests.post('https://ti-api.ghostwolfindustries.com/token', data)
 json_data = json.loads(tResponse.text)
 token = json_data['access_token']
 
 '''
   Using the access token, issue a GET request to determine if the subject ip 128.75.222.116 is in the Hoplite Threat Intel database
 '''
-aResponse = requests.get('https://ti-api.hoplite.io/ip/128.75.222.116', headers={'Authorization': 'Bearer ' + token})
+aResponse = requests.get('https://ti-api.ghostwolfindustries.com/ip/128.75.222.116', headers={'Authorization': 'Bearer ' + token})
 
 '''
   Reformat and print the output

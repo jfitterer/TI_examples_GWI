@@ -2,15 +2,15 @@
 ## curl CLI for the Hoplite Threat Intel API
 ## Not fully parametereized, illustrative purposes only
 ##
-## @author	acochenour@hopliteindustries.com
-## @copyright	2014-2016 Hoplite Industries, Inc.
+## @author	jfitterer@ghostwolfindustries.com
+## @copyright	2014-2019 GhostWolf Industries, Inc.
 ## @license	
 ## @version	0.1
 ## @since	v0.1
 ##
 
 # Obtain an access token using your credentials
-root@localhost$ curl -X POST -d client_id=user@domain.com -d client_secret=XXXXX-XXXX-XXXXX-XXXXX-XXXXXX -d grant_type=client_credentials https://ti-api.hoplite.io/token
+root@localhost$ curl -X POST -d client_id=user@domain.com -d client_secret=XXXXX-XXXX-XXXXX-XXXXX-XXXXXX -d grant_type=client_credentials https://ti-api.ghostwolfindustries.com/token
 {
     "access_token": "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
     "expires_in": 3600,
@@ -18,8 +18,8 @@ root@localhost$ curl -X POST -d client_id=user@domain.com -d client_secret=XXXXX
     "scope": "tiReadOnly"
 }
 
-# Using the access token obtained above, issue a GET to determine if the subject IP appears within the Hoplite Threat Intel database
-root@localhost$ curl -H 'Authorization: Bearer XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX' https://ti-api.hoplite.io/ip/128.75.222.116
+# Using the access token obtained above, issue a GET to determine if the subject IP appears within the GWI Threat Intel database
+root@localhost$ curl -H 'Authorization: Bearer XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX' https://ti-api.ghostwolfindustries.com/ip/128.75.222.116
 {
     "epoch": "1479214803",
     "firstSeen": "1479196804",
@@ -30,5 +30,5 @@ root@localhost$ curl -H 'Authorization: Bearer XXXXXXXXXXXXXXXXXXXXXXXXXXXXXX' h
     "threatEntityType": "ip",
     "timesObserved": "6",
     "threatTags": "Scanning-Bruteforce ",
-    "lastSeenTimestamp": "Tue Nov 15 5:00:03 PST 2016"
+    "lastSeenTimestamp": "Tue Nov 15 5:00:03 PST 2019"
 }
