@@ -1,6 +1,6 @@
 '''
   gwi_ti_test.php
-  Test harness for for interacting with the Hoplite Threat Intelligence APIs
+  Test harness for for interacting with the GhostWolf Threat Intelligence APIs
   Not fully parametereized, illustrative purposes only
  
   @author	jfitterer@ghostwolfindustries.com
