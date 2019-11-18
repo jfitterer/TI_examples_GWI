@@ -1,5 +1,5 @@
 ##
-## curl CLI for the Hoplite Threat Intel API
+## curl CLI for the GhostWolf Threat Intel API
 ## Not fully parametereized, illustrative purposes only
 ##
 ## @author	jfitterer@ghostwolfindustries.com
