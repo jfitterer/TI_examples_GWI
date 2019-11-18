@@ -1,5 +1,5 @@
 ##
-## Ruby example for the Hoplite Threat Intel API
+## Ruby example for the GhostWolf Threat Intel API
 ## Not fully parametereized, illustrative purposes only
 ##
 ## @author	jfitterer@ghostwolfindustries.com
